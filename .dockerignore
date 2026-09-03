@@ -1,0 +1,6 @@
+bin/
+start.bat
+start.ps1
+.git
+.gitignore
+README.md

@@ -1,0 +1,12 @@
+services:
+  taskflow:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: taskflow-vote-app
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    volumes:
+      # Mounts the SQLite database directly into the working directory
+      - ./todos.db:/app/todos.db
