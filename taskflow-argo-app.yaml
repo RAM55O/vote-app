@@ -8,18 +8,18 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/<YOUR_USERNAME>/<YOUR_REPOSITORY>.git' # Replace with your Git URL
-    targetRevision: main                                               # Branch name
-    path: taskflow                                                     # Path to the Helm chart folder
+    repoURL: "https://github.com/RAM55O/https://github.com/RAM55O/vote-app.git" # Replace with your Git URL
+    targetRevision: main # Branch name
+    path: taskflow # Path to the Helm chart folder
     helm:
       valueFiles:
         - values.yaml
   destination:
-    server: 'https://kubernetes.default.svc'                           # In-cluster destination
-    namespace: default                                                 # Target namespace
+    server: "https://kubernetes.default.svc" # In-cluster destination
+    namespace: default # Target namespace
   syncPolicy:
     automated:
-      prune: true                                                      # Delete resources removed from Git
-      selfHeal: true                                                   # Revert manual changes made in cluster
+      prune: true # Delete resources removed from Git
+      selfHeal: true # Revert manual changes made in cluster
     syncOptions:
       - CreateNamespace=true
